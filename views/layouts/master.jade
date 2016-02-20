@@ -1,3 +1,25 @@
-include ../partials/header.jade
-block content
-include ../partials/footer.jade
+doctype html
+html(lang="en")
+	head
+		meta(charset="utf-8")
+		meta(http-equiv="x-ua-compatible" content="ie=edge")
+		meta(name="description", content="Base configuration of sass files for all JCD projects.")
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+		
+		title JCD SASS Base
+		
+		link(rel="stylesheet", href="/assets/css/style.css")
+	body
+		div.container.page-wrap
+			header.site-header.navbar.navbar-clean
+				nav
+					header.navbar__header
+						div.nav__menu
+							ul.navbar__items.navbar--right.list-inline
+								li: a(href="#") Projects
+								li: a(href="#") Journal
+								li: a(href="#") Information
+			block content
+			footer.site-footer
+				div.container
+					p JCD &copy; 2015. All rights reserved.
