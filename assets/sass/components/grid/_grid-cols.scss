@@ -1,0 +1,62 @@
+@mixin column-base {
+	float: left;
+	display: block;
+}
+
+@function col-width( $cols, $total: $default-total-cols, $gutter: $default-gutter ){
+	$remaining-width: 100% - ($total - 1) * $gutter;
+	$absorbed: ($cols - 1) * $gutter;
+	$col-width: $remaining-width / $total * $cols + $absorbed;
+
+	@return $col-width;
+}
+
+@mixin column( $cols, $total: $default-total-cols, $gutter: $default-gutter ) {
+    width: col-width( $cols, $total, $gutter );
+}
+
+@mixin col-push( $cols, $total: $default-total-cols, $gutter: $default-gutter ) {
+	margin-left: col-width( $cols, $total, $gutter ) + $gutter !important;
+}
+
+@mixin render-columns( $pre: 'col' ){
+
+	[class*="#{$pre}-"] {
+		@extend %full-width;
+
+		@include bp-min($screen-xs) {
+			@include column-base;
+
+			& + & {
+				margin-left: $default-gutter;
+			}
+		}
+	}
+
+	@for $i from 1 through $default-total-cols {
+		.#{$pre}-#{$i} {
+			@include column( $i );
+		}
+	}
+
+}
+
+@mixin render-responsive-columns( $pre: 'col', $bp-array: $grid-bp-array ){
+
+	@each $id in map-keys($bp-array) {
+		@include bp-min( map-get($bp-array, $id) ) {
+			@for $i from 1 through $default-total-cols {
+				.#{$pre}-#{$id}-#{$i} {
+					@include column( $i );
+				}
+				.#{$pre}-#{$id}-offset-#{$i} {
+					@include col-push( $i );
+				}
+			}
+		}
+	}
+			
+}
+
+@include render-columns();
+@include render-responsive-columns();

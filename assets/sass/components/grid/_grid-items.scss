@@ -1,0 +1,25 @@
+@mixin grid-item($target, $total){
+	$row: $total / $target;
+	$repeat: "#{$row}n+1";
+
+	@include column($target, $total);
+
+	& + .grid-item {
+		margin-left: $default-gutter;
+	}
+
+	&:nth-of-type(#{$repeat}){
+		margin-left: 0;
+	}
+}
+
+.grid-3-up {
+	.grid-item {
+		@include bp-between($mobile, $medium-screen){
+			@include grid-item(6,12);
+		}
+		@include bp-min($medium-screen){
+			@include grid-item(4,12);
+		}
+	}
+}

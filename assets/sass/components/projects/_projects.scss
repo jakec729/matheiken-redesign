@@ -1,0 +1,32 @@
+.projects__group-name {
+	font-size: 12px;
+	margin: 0;
+}
+
+
+.project {
+	margin-bottom: 1em;
+	// padding: 1em;
+
+	&__title,
+	&__category,
+	&__description {
+		margin: 0;
+	}
+
+	&__category {
+		font-size: 13px;
+		color: grey(50);
+	}
+
+	&__title {
+		font-size: 19px;
+		font-weight: 500;
+		margin-bottom: .25rem;
+	}
+
+	&__description {
+		font-size: 13px;
+		line-height: 1.5em;
+	}
+}

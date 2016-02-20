@@ -1,0 +1,27 @@
+.container {
+	margin: 0 auto;
+	width: $container-width;
+	@include clearfix();
+
+	@include bp-min($col-width * 5 + $gutter * 2) {
+		width: $col-width * 5;
+	}
+}
+
+// @mixin group(){
+// 	@include clearfix;
+// 	@include full-width();
+// }
+
+// .row,
+// .group {
+// 	@include group;
+// }
+
+// @import "grid-cols";
+// @import "flex-cols";
+// @import "grid-items";
+
+
+
+

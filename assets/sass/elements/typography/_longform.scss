@@ -1,0 +1,21 @@
+.longform {
+
+	h1, h2, h3, h4, h5, h6 {
+		margin: $base-type-margin * 2 0 $base-type-margin;
+	}
+
+	h3, h4 {
+		@include font-sans(700);
+		@include tracking(.1em);
+	}
+
+	h3 { 
+		font-size: mt(1); 
+	}
+
+	h4 { 
+		font-size: ( .85 * mt(1) ); 
+		color: grey(40);
+	}
+
+}

@@ -1,0 +1,50 @@
+// .navbar__header {
+// 	padding: 2em 0 4em;
+// 	font-size: 1rem;
+// 	display: flex;
+// 	align-items: center;
+
+// 	a {
+// 		text-decoration: none;
+// 	}
+// }
+
+// .navbar__brand {
+// 	flex: 0 0 25%;
+// 	padding: 0;
+// 	margin: 0;
+// }
+
+// .nav__menu {
+// 	flex: 0 0 75%;
+// 	padding-left: 1em;
+
+// 	li a {
+// 		width: 100px;
+// 	}
+// }
+
+// .site__logo {
+// 	width: 2.5em;
+// 	display: block;
+// }
+
+// $nav-collapse-bp: $screen-sm;
+
+// nav {
+// 	text-align: center;
+
+// 	ul {
+// 		@include bp-min($nav-collapse-bp) {
+// 			@include list-inline;
+// 		}
+// 	}
+
+// 	ul li a {
+// 		text-decoration: none;
+// 		padding: 1em;
+// 	}
+
+// }
+
+// @import "navbar";

@@ -1,0 +1,57 @@
+.site-header {
+	padding: 0;
+}
+
+.page-wrap {
+	background: linear-gradient(
+        90deg,
+        rgba(0,0,0,0.1) 0%,
+        transparent 1%
+	);
+}
+
+.page-wrap { 
+	background-size: $col-width; 
+}
+
+// body {
+// 	margin: 0;
+// 	padding: 0;
+// }
+
+// .site-content {
+// 	padding: 2em 0;
+// }
+
+// .site-header {
+// 	padding: 1em 0;
+
+// 	.site-title {
+// 		margin: .75em 0 0 0;
+// 		line-height: 1;
+// 		font-size: modular-type(3);
+// 	}
+// }
+
+// .site-footer {
+// 	padding: 2em 0;
+// }
+
+// .page-body {
+// 	margin: 2em 0;
+// }
+
+// .sample-content {
+// 	& + & {
+// 		margin-top: 2em;
+// 	}
+
+// 	.section-heading {
+// 		// @include tracking;
+// 		@include block-separator;
+// 		margin-bottom: 1em;
+// 		font-weight: bold;
+// 		font-weight: 700;
+// 		font-size: 1.5rem;
+// 	}
+// }
