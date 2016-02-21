@@ -1,7 +1,7 @@
 extends layouts/master.jade
 
 mixin project(_category,_name,_src)
-	article.project.flex-item.hover-fixed: a(href="/single-post.html")
+	article.project.flex-item.hover-fixed: a(href="single-post.html")
 		figure.project__image.hover-fixed__image
 			img(src=_src, alt="Project Image")
 		p.project__category= _category
