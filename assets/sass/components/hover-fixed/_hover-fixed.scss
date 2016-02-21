@@ -1,0 +1,28 @@
+.hover-fixed {
+
+	&__image {
+		display: none;
+		z-index: -1;
+		text-align: right;	
+		position: fixed;
+		top: $col-width * 2/3;
+		left: 0;
+		width: 100%;
+
+		@include col-bp-min(five) {
+			left: calc((100% - #{$content-width})/2);
+			width: calc(100% - (100% - #{$content-width})/2);
+		}
+
+		img {
+			display: inline-block;
+		}
+	}
+
+	@include col-bp-min(three) {
+		&:hover &__image{
+			display: block;
+		}
+	}
+
+}

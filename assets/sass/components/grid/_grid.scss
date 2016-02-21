@@ -1,10 +1,14 @@
 .container {
 	margin: 0 auto;
-	width: $container-width;
 	@include clearfix();
+	width: 100%;
 
-	@include bp-min($col-width * 5 + $gutter * 2) {
-		width: $col-width * 5;
+	@include col-bp-min(two){
+		width: $container-width;
+	}
+
+	@include bp-min($content-width/.9) {
+		width: $content-width;
 	}
 }
 

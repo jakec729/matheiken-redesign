@@ -1,0 +1,58 @@
+
+.post {
+	font-size: 13px;
+	line-height: 16px;
+
+	&__image,
+	&__content,
+	&__images {
+		padding: 0 $gutter;
+	}
+
+	&__details {
+		@include col-bp-min(four) {
+			display: flex;
+		}
+	}
+
+	&__content {
+		flex: 0 0 40%;
+		margin-bottom: $gutter;
+	}
+
+	&__images {
+		flex: 0 0 60%;
+	}
+
+	&__title {
+		font-size: 19px;
+		line-height: 23px;
+		font-weight: 700;
+		margin-bottom: 0;
+	}
+
+	&__subhead {
+		font-weight: 700;
+	}
+
+	&__description {
+		font-weight: 400;
+		color: grey(60);
+	}
+
+	&__footer {
+		padding-bottom: $gutter;
+	}
+
+	figure {
+		margin-bottom: $gutter;
+	}
+
+	a.cta {
+		font-weight: 700;
+		text-decoration: none;
+		@include arrow;
+	}
+
+
+}

@@ -11,15 +11,13 @@ html(lang="en")
 		link(rel="stylesheet", href="/assets/css/style.css")
 	body
 		div.container.page-wrap
-			header.site-header.navbar.navbar-clean
-				nav
-					header.navbar__header
-						div.nav__menu
-							ul.navbar__items.navbar--right.list-inline
-								li: a(href="#") Projects
-								li: a(href="#") Journal
-								li: a(href="#") Information
+			header.site-header
+				nav.navbar.navbar-clean
+					div.navbar__brand
+						a(href="/"): img(src="/assets/imgs/matheiken.svg", alt="Logo")
+						h1.seo-hidden Sheena Mathieken
+					ul.navbar__items
+						li: a.active(href="#") Projects
+						li: a(href="#") Journal
+						li: a(href="#") Information
 			block content
-			footer.site-footer
-				div.container
-					p JCD &copy; 2015. All rights reserved.

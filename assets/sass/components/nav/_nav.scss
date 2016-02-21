@@ -1,52 +1,64 @@
+.navbar {
+	padding: $gutter*1.5 0 $gutter;
+
+	@include col-bp-min(one) {
+		display: flex;
+		align-items: center;
+	}
+
+	.active {
+		font-weight: 700;
+	}
+}
+
+.navbar__items {
+	font-size: 13px;
+	line-height: 16px;
+	margin: 0;
+	
+	@include col-bp-min(three){
+		display: flex;
+	}
+
+	li {
+		margin-bottom: 6px;
+
+		@include col-bp-min(three) {
+			flex: 0 0 $col-width/2;
+		}
+	}
+
+	a {
+		text-decoration: none;
+		padding-left: $gutter;
+	}
+}
+
+.navbar__brand {
+	width: $col-width;
+	padding-left: $gutter;
+	padding-right: $gutter;
+	margin-bottom: $gutter;
+	position: relative;
+	left: -10px;
+
+	@include col-bp-min(three) {
+		margin-bottom: 0;
+	}
+
+	img {
+		width: $col-width/4;
+	}
+
+	@include bp-min(1350px) {
+		position: absolute;
+		left: 0;
+		padding: 0;
+		width: 10%;
+		text-align: center;
+	}
 
 
-// .navbar__header {
-// 	padding: 2em 0 4em;
-// 	font-size: 1rem;
-// 	display: flex;
-// 	align-items: center;
-
-// 	a {
-// 		text-decoration: none;
-// 	}
-// }
-
-// .navbar__brand {
-// 	flex: 0 0 25%;
-// 	padding: 0;
-// 	margin: 0;
-// }
-
-// .nav__menu {
-// 	flex: 0 0 75%;
-// 	padding-left: 1em;
-
-// 	li a {
-// 		width: 100px;
-// 	}
-// }
-
-// .site__logo {
-// 	width: 2.5em;
-// 	display: block;
-// }
-
-// $nav-collapse-bp: $screen-sm;
-
-// nav {
-// 	text-align: center;
-
-// 	ul {
-// 		@include bp-min($nav-collapse-bp) {
-// 			@include list-inline;
-// 		}
-// 	}
-
-// 	ul li a {
-// 		text-decoration: none;
-// 		padding: 1em;
-// 	}
-
-// }
-
-// @import "navbar";
+	// img {
+	// }
+}

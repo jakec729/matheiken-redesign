@@ -1,68 +1,73 @@
+$label-width: 130px;
+
+$col-bps: (
+	one:    ($col-width + $label-width),
+	two: 	($col-width * 2) / 0.9,
+	three: 	($col-width * 2 + $label-width) / 0.9,
+	four: 	($col-width * 3 + $label-width) / 0.9,
+	five: 	($col-width * 4 + $label-width) / 0.9,
+);
+
+@function col-bp($key) {
+	@return map-get($col-bps, $key);
+}
+
+@mixin col-bp-min($key) {
+	@include bp-min(col-bp($key)){
+		@content;
+	}
+}
+
+
 .flex-container {
-	display: flex;
-	flex-wrap: wrap;
+	@include col-bp-min(one) {
+		display: flex;
+		flex-wrap: wrap;
+	}
 	
 	.flex-item {
 		padding-left: $gutter;
 		padding-right: $gutter;
+		flex: 0 0 $col-width;
+		max-width: $col-width;
 	}
 	
-	header {
-		width: $col-width;
-		order: 2;
+	header.flex-item {
+		flex: 1 0 $label-width;
+		max-width: $label-width;
+		margin-bottom: $col-width/5;
+
+		@include col-bp-min(one) {
+			order: 2;
+		}
+
+		@include col-bp-min(two) {
+			order: 1;
+		}
+		@include col-bp-min(three) {
+			order: 2;
+		}
 	}
 }
 
 .flex-4-5 {
-	@include bp-min($gutter * 2 + $col-width * 3) {
+	// @include col-bp-min(one) {
+		flex: 0 0 $col-width;
+	// }
+
+	@include col-bp-min(two) {
 		flex: 0 0 $col-width*2;
+		order: 2;
 	}
-	@include bp-min($gutter * 2 + $col-width * 4) {
+
+	@include col-bp-min(three) {
+		order: 1;
+	}
+
+	@include col-bp-min(four) {
 		flex: 0 0 $col-width*3;
 	}
-	@include bp-min($gutter * 2 + $col-width * 5) {
+	@include col-bp-min(five) {
 		flex: 0 0 $col-width*4;
 	}
 }
-
-.project.flex-item {
-	flex: 0 0 $col-width;
-}
-
-
-
-
-// .projects {
-// 	display: flex;
-// 	padding-bottom: 4em;
-
-// 	header {
-// 		order: 2;
-// 		padding: 1em;
-// 		flex: 0 0 $col-width;
-// 	}
-
-// 	&-wrapper {
-// 		$gap: 60px;
-
-// 		@include bp-min($col-width * 3 + $gap) {
-// 			display: flex;
-// 			justify-content: left;
-// 			flex-wrap: wrap;
-// 			flex: 0 0 auto;
-// 			flex-basis: $col-width * 2;
-// 		}
-
-// 		@include bp-min($col-width * 4 + $gap) {
-// 			flex-basis: $col-width * 3;
-// 		}
-
-// 		@include bp-min($col-width * 5 + $gap) {
-// 			flex-basis: $col-width * 4;
-// 		}
-// 	}
-
-// 	.project {
-// 		flex: 0 0 $col-width;
-// 	}
-// }
