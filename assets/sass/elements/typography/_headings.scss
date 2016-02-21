@@ -2,7 +2,6 @@ h1,h2,h3,h4,h5,h6 {
 	color: $subheading-color;
 	line-height: 1.5em;
 	margin: $base-type-margin 0;
-	// @include font-serif;
 
 	small {
 		font-family: $font-sans;
@@ -18,8 +17,4 @@ h1 {
 
 .heading {
 	margin-top: 0;
-}
-
-.heading-label {
-	@include tracked-label();
 }

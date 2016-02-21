@@ -15,12 +15,12 @@
 	@media screen and ( min-width: $min ) and ( max-width: $new-max ) { @content; }
 }
 
-@mixin map-to-grid($direction: "max") {
-	@each $id in map-keys($grid-bp-array){
-		&-#{$direction}-#{$id} {
-			@include breakpoint( map-get($grid-bp-array, $id), $direction ) {
-				@content
-			}
-		}
-	}
-}
+// @mixin map-to-grid($direction: "max") {
+// 	@each $id in map-keys($grid-bp-array){
+// 		&-#{$direction}-#{$id} {
+// 			@include breakpoint( map-get($grid-bp-array, $id), $direction ) {
+// 				@content
+// 			}
+// 		}
+// 	}
+// }
