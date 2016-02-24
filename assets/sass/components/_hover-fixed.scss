@@ -1,4 +1,13 @@
+// .site-header {
+// 	height: 106px;
+// }
+
 .hover-fixed {
+	z-index: 2;
+
+	&:hover {
+		z-index: 1;
+	}
 
 	&__image {
 		display: none;
@@ -8,21 +17,19 @@
 		top: $col-width * 2/3;
 		left: 0;
 		width: 100%;
-
-		// @include col-bp-min(five) {
-			left: calc((100% - #{$content-width})/2);
-			width: calc(100% - (100% - #{$content-width})/2);
-		// }
+		left: calc((100% - #{$content-width})/2);
+		width: calc(100% - (100% - #{$content-width})/2);
 
 		img {
 			display: inline-block;
 		}
 	}
 
-	// @include col-bp-min(three) {
+	@include col-bp-min(4) {
 		&:hover &__image{
 			display: block;
 		}
-	// }
+	}
+
 
 }
