@@ -4,7 +4,10 @@
 }
 
 .projects {
-	margin-bottom: $gutter * 2;
+
+	& + & {
+		margin-top: $gutter * 2;
+	}
 
 	a {
 		text-decoration: none;

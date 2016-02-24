@@ -1,5 +1,5 @@
 @mixin col-bp-min($col) {
-	@include bp-min($col-width * $col / .85) {
+	@include bp-min($col-width * $col / $container-width-num) {
 		@content;
 	}
 }

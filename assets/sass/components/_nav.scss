@@ -1,10 +1,20 @@
-.navbar {
-	padding: $gutter*1.5 0 $gutter;
+.site-header {
+	// height: 400px;
+}
 
-	// @include col-bp-min(one) {
-		display: flex;
-		align-items: center;
-	// }
+.navbar {
+	position: fixed;
+	width: $container-width;
+	left: (100% - $container-width) / 2;
+	top: 0;
+	padding: $gutter*0.5 0;
+	display: flex;
+	align-items: center;
+	background-color: white;
+
+	&.page-wrap {
+		min-height: auto;
+	}
 
 	.active {
 		font-weight: 700;
@@ -15,17 +25,11 @@
 	font-size: 13px;
 	line-height: 16px;
 	margin: 0;
-	
-	// @include col-bp-min(three){
-		display: flex;
-	// }
+	display: flex;
 
 	li {
 		margin-bottom: 6px;
-
-		// @include col-bp-min(three) {
-			flex: 0 0 $col-width/2;
-		// }
+		flex: 0 0 $col-width/2;
 	}
 
 	a {
@@ -35,30 +39,17 @@
 }
 
 .navbar__brand {
-	width: $col-width;
-	padding-left: $gutter;
-	padding-right: $gutter;
-	margin-bottom: $gutter;
+	// padding-left: $gutter;
+	// width: $col-width/2;
+	width: (100% - $container-width) / 2 / $container-width-num;
+	margin-left: (100% - $container-width) / 2 / $container-width-num * -1;
+	text-align: center;
+	padding: 0 $gutter;
 	position: relative;
-	left: -10px;
-
-	// @include col-bp-min(three) {
-		margin-bottom: 0;
-	// }
+	left: -5px;
+	margin-bottom: 0;
 
 	img {
-		width: $col-width/4;
+		max-width: $gutter*2;
 	}
-
-	@include bp-min(1350px) {
-		position: absolute;
-		left: 0;
-		padding: 0;
-		width: 10%;
-		text-align: center;
-	}
-
-
-	// img {
-	// }
 }

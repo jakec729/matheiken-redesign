@@ -1,14 +1,24 @@
 .site-header {
 	margin-bottom: 2 * $gutter;
+	height: 106px;
 }
 
 .page-wrap {
 	background: linear-gradient(
         90deg,
-        rgba(0,0,0,0.1) 0%,
+        grey(10) 0%,
         transparent 0.5%
 	);
 	background-size: $col-width; 
-
 	min-height: 100vh;
+
+	&.navbar {
+		background: linear-gradient(
+	        90deg,
+	        grey(10) 0%,
+	        white 0.5%
+		);
+		background-size: $col-width; 
+		min-height: auto;
+	}
 }

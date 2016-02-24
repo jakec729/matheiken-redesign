@@ -1,17 +1,3 @@
-.container {
-	margin: 0 auto;
-	@include clearfix();
-	width: 100%;
-
-	// @include col-bp-min(two){
-	// 	width: $container-width;
-	// }
-
-	// @include bp-min($content-width/.9) {
-	// 	width: $content-width;
-	// }
-}
-
 .container-fluid {
 	margin: 0 auto;
 	width: $container-width;
