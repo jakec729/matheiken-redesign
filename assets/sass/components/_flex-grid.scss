@@ -1,28 +1,20 @@
-$label-width: 130px;
-
-$col-bps: (
-	one:    ($col-width + $label-width),
-	two: 	($col-width * 2) / 0.9,
-	three: 	($col-width * 2 + $label-width) / 0.9,
-	four: 	($col-width * 3 + $label-width) / 0.9,
-	five: 	($col-width * 4 + $label-width) / 0.9,
-);
-
-@function col-bp($key) {
-	@return map-get($col-bps, $key);
-}
-
-@mixin col-bp-min($key) {
-	@include bp-min(col-bp($key)){
+@mixin col-bp-min($col) {
+	@include bp-min($col-width * $col / .85) {
 		@content;
 	}
 }
 
-
 .flex-container {
-	@include col-bp-min(one) {
+	@include col-bp-min(3) {
 		display: flex;
 		flex-wrap: wrap;
+		flex-direction: row;
+	}
+
+	@for $i from 3 through 8 {
+		@include col-bp-min($i) {
+			max-width: $col-width * $i;
+		}
 	}
 	
 	.flex-item {
@@ -31,43 +23,23 @@ $col-bps: (
 		flex: 0 0 $col-width;
 		max-width: $col-width;
 	}
-	
-	header.flex-item {
-		flex: 1 0 $label-width;
-		max-width: $label-width;
-		margin-bottom: $col-width/5;
 
-		@include col-bp-min(one) {
-			order: 2;
-		}
-
-		@include col-bp-min(two) {
-			order: 1;
-		}
-		@include col-bp-min(three) {
-			order: 2;
-		}
+	&.projects-wrap {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		flex: 0 0 calc(100% - #{$col-width}); 
 	}
 }
+	
+.projects__header {
+	margin-bottom: $col-width/5;
+	flex-grow: 0;
+	flex-shrink: 3;
+	flex-basis: auto;
 
-.flex-4-5 {
-	// @include col-bp-min(one) {
-		flex: 0 0 $col-width;
-	// }
-
-	@include col-bp-min(two) {
-		flex: 0 0 $col-width*2;
+	@include col-bp-min(3) {
+		flex-basis: $col-width;
 		order: 2;
-	}
-
-	@include col-bp-min(three) {
-		order: 1;
-	}
-
-	@include col-bp-min(four) {
-		flex: 0 0 $col-width*3;
-	}
-	@include col-bp-min(five) {
-		flex: 0 0 $col-width*4;
 	}
 }

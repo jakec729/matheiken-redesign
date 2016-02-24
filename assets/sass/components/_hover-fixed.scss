@@ -9,20 +9,20 @@
 		left: 0;
 		width: 100%;
 
-		@include col-bp-min(five) {
+		// @include col-bp-min(five) {
 			left: calc((100% - #{$content-width})/2);
 			width: calc(100% - (100% - #{$content-width})/2);
-		}
+		// }
 
 		img {
 			display: inline-block;
 		}
 	}
 
-	@include col-bp-min(three) {
+	// @include col-bp-min(three) {
 		&:hover &__image{
 			display: block;
 		}
-	}
+	// }
 
 }

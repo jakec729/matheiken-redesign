@@ -1,10 +1,10 @@
 .navbar {
 	padding: $gutter*1.5 0 $gutter;
 
-	@include col-bp-min(one) {
+	// @include col-bp-min(one) {
 		display: flex;
 		align-items: center;
-	}
+	// }
 
 	.active {
 		font-weight: 700;
@@ -16,16 +16,16 @@
 	line-height: 16px;
 	margin: 0;
 	
-	@include col-bp-min(three){
+	// @include col-bp-min(three){
 		display: flex;
-	}
+	// }
 
 	li {
 		margin-bottom: 6px;
 
-		@include col-bp-min(three) {
+		// @include col-bp-min(three) {
 			flex: 0 0 $col-width/2;
-		}
+		// }
 	}
 
 	a {
@@ -42,9 +42,9 @@
 	position: relative;
 	left: -10px;
 
-	@include col-bp-min(three) {
+	// @include col-bp-min(three) {
 		margin-bottom: 0;
-	}
+	// }
 
 	img {
 		width: $col-width/4;

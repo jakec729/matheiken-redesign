@@ -11,14 +11,14 @@ mixin project(_category,_name,_src)
 block content
 	main
 		section.projects.flex-container
-			header.flex-item: h3.projects__group-name Ongoing
-			div.flex-container.flex-4-5
+			header.projects__header.flex-item: h3.projects__group-name Ongoing
+			div.flex-container.projects-wrap
 				+project('Experience Design', 'New Lab', "https://unsplash.it/1200/600/?random")
 				+project('Feature Film', 'Sea to Shining Sea', "https://unsplash.it/800/400/?random")
 				+project('Feature Film', 'Yojimbo', "https://unsplash.it/960/540/?random")
 		section.projects.flex-container
-			header.flex-item: h3.projects__group-name 2015&ndash;2013
-			div.flex-container.flex-4-5
+			header.projects__header.flex-item: h3.projects__group-name 2015&ndash;2013
+			div.flex-container.projects-wrap
 				+project('Feature Film', 'La Vos De Los Silenciados', "https://unsplash.it/600/540/?random")
 				+project('Talk', 'Rise of the Unemployables', "https://unsplash.it/980/540/?random")
 				+project('Residency', 'New Inc', "https://unsplash.it/969/540/?random")
@@ -27,8 +27,8 @@ block content
 				+project('UX + Design', 'Correlate Data', "https://unsplash.it/960/800/?random")
 				+project('UX + Design', 'B-Team', "https://unsplash.it/960/840/?random")
 		section.projects.flex-container
-			header.flex-item: h3.projects__group-name 2012&ndash;2010
-			div.flex-container.flex-4-5
+			header.projects__header.flex-item: h3.projects__group-name 2012&ndash;2010
+			div.flex-container.projects-wrap
 				+project('Independent', 'Uniform Book', "https://unsplash.it/960/740/?random")
 				+project('Independent', 'U.P. Book', "https://unsplash.it/970/540/?random")
 				+project('Talk', 'TED x Dubai', "https://unsplash.it/960/547/?random")
@@ -37,8 +37,8 @@ block content
 				+project('UX + Design', 'Salon App', "https://unsplash.it/990/540/?random")
 				+project('Independent', 'Posterity', "https://unsplash.it/960/549/?random")
 		section.projects.flex-container
-			header.flex-item: h3.projects__group-name Pre-2010
-			div.flex-container.flex-4-5
+			header.projects__header.flex-item: h3.projects__group-name Pre-2010
+			div.flex-container.projects-wrap
 				+project('UX + Design', 'Coverse', "https://unsplash.it/969/540/?random")
 				+project('UX + Design', 'US Open App', "https://unsplash.it/999/540/?random")
 				+project('Independent', 'Mofongo : Live', "https://unsplash.it/960/540/?random")

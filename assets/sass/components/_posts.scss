@@ -10,9 +10,9 @@
 	}
 
 	&__details {
-		@include col-bp-min(four) {
+		// @include col-bp-min(four) {
 			display: flex;
-		}
+		// }
 	}
 
 	&__content {
