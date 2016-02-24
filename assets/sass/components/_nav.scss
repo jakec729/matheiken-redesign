@@ -1,16 +1,18 @@
-.site-header {
-	// height: 400px;
-}
-
 .navbar {
-	position: fixed;
-	width: $container-width;
-	left: (100% - $container-width) / 2;
-	top: 0;
 	padding: $gutter*0.5 0;
-	display: flex;
-	align-items: center;
 	background-color: white;
+
+	@include col-bp-min(2) {
+		display: flex;
+		align-items: center;
+	}
+
+	&.navbar-fixed {
+		position: fixed;
+		width: $container-width;
+		left: (100% - $container-width) / 2;
+		top: 0;
+	}
 
 	&.page-wrap {
 		min-height: auto;
@@ -25,7 +27,10 @@
 	font-size: 13px;
 	line-height: 16px;
 	margin: 0;
-	display: flex;
+
+	@include col-bp-min(3) {
+		display: flex;
+	}
 
 	li {
 		margin-bottom: 6px;
@@ -39,17 +44,26 @@
 }
 
 .navbar__brand {
-	// padding-left: $gutter;
-	// width: $col-width/2;
-	width: (100% - $container-width) / 2 / $container-width-num;
-	margin-left: (100% - $container-width) / 2 / $container-width-num * -1;
-	text-align: center;
-	padding: 0 $gutter;
+	width: $col-width;
+	text-align: left;
+	padding-left: $gutter;
 	position: relative;
 	left: -5px;
-	margin-bottom: 0;
+	margin-bottom: $gutter;
+
+	@include col-bp-min(3) {
+		width: (100% - $container-width) / 2 / $container-width-num;
+		margin-left: (100% - $container-width) / 2 / $container-width-num * -1;
+		text-align: center;
+		padding-left: 0;
+		margin-bottom: 0;
+	}
 
 	img {
 		max-width: $gutter*2;
+
+		@include col-bp-min(3) {
+			max-width: $gutter * 1.5;
+		}
 	}
 }
