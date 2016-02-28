@@ -1,11 +1,8 @@
 .navbar {
 	padding: $gutter*0.5 0;
 	background-color: white;
-
-	@include col-bp-min(2) {
-		display: flex;
-		align-items: center;
-	}
+	display: flex;
+	align-items: center;
 
 	&.navbar-fixed {
 		position: fixed;
@@ -36,12 +33,17 @@
 	font-size: 13px;
 	line-height: 16px;
 	margin: 0;
+	text-align: right;
+	padding-right: $gutter;
+	flex-grow:1;
 
 	@include col-bp-min(3) {
+		text-align: left;
 		display: flex;
 	}
 
 	li {
+		display: inline-block;
 		margin-bottom: 6px;
 		flex: 0 0 $col-width/2;
 	}
@@ -53,12 +55,10 @@
 }
 
 .navbar__brand {
-	width: $col-width;
-	text-align: left;
+	width: 20%;
 	padding-left: $gutter;
 	position: relative;
 	left: -5px;
-	margin-bottom: $gutter;
 
 	@include col-bp-min(3) {
 		width: (100% - $container-width) / 2 / $container-width-num;

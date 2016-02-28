@@ -1,6 +1,13 @@
 .container-fluid {
 	margin: 0 auto;
-	width: $container-width;
+
+	@include col-bp-min(3){
+		width: $container-width;
+	}
+
+	// @include bp-min($col-width * 2.5 / $container-width-num){
+	// 	width: $container-width;
+	// }
 }
 
 

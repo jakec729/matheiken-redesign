@@ -1,21 +1,14 @@
 @mixin col-bp-min($col) {
-	@include bp-min($col-width * $col / $container-width-num) {
+	@include bp-min( ( $col-width * $col + ( $col-width / 2 ) ) / $container-width-num) {
 		@content;
 	}
 }
 
 .flex-container {
-	@include col-bp-min(3) {
-		display: flex;
-		flex-wrap: wrap;
-		flex-direction: row;
-	}
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
 
-	@for $i from 3 through 8 {
-		@include col-bp-min($i) {
-			max-width: $col-width * $i;
-		}
-	}
 	
 	.flex-item {
 		padding-left: $gutter;
@@ -28,18 +21,30 @@
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-		flex: 0 0 calc(100% - #{$col-width}); 
+		flex: 0 0 $col-width*2; 
+
+		@for $i from 2 through 3 {
+			@include bp-min( $col-width * $i + $col-width / 2 ) {
+				flex-basis: $col-width * $i;
+			}
+		}
+	
+		@for $i from 3 through 8 {
+			@include col-bp-min($i) {
+				flex-basis: $col-width * $i;
+			}
+		}
 	}
 }
 	
 .projects__header {
 	margin-bottom: $col-width/5;
-	flex-grow: 0;
-	flex-shrink: 3;
-	flex-basis: auto;
-
-	@include col-bp-min(3) {
-		flex-basis: $col-width;
+	@include bp-min($col-width * 2.5) {
 		order: 2;
+	}
+
+	&.flex-item {
+		flex-grow: 1;
+		flex-basis: $col-width/2;
 	}
 }

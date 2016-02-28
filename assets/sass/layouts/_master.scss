@@ -1,3 +1,7 @@
+body {
+	min-width: $col-width * 2;
+}
+
 .site-header {
 	margin-bottom: 2 * $gutter;
 }
