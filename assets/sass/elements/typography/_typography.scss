@@ -4,3 +4,14 @@
 @import "base-typography";
 @import "headings";
 @import "links";
+
+@mixin block-separator() {
+	&::after {
+		content: "";
+		width: $gutter/2;
+		background-color: $primary-color;
+		height: 2px;
+		display: inline-block;
+		margin-top: $gutter;
+	}
+}

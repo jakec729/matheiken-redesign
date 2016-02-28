@@ -4,6 +4,12 @@
 	}
 }
 
+@for $i from 1 through 12 {
+	.flex-col-#{$i} {
+		flex-basis: 100% / 12 * $i;
+	}
+}
+
 .flex-container {
 	display: flex;
 	flex-wrap: wrap;
@@ -13,8 +19,11 @@
 	.flex-item {
 		padding-left: $gutter;
 		padding-right: $gutter;
+	}
+
+	&.projects-wrap .flex-item {
 		flex: 0 0 $col-width;
-		max-width: $col-width;
+		max-width: $col-width;		
 	}
 
 	&.projects-wrap {

@@ -1,0 +1,9 @@
+.list--links {
+	li a {
+		&:before {
+			content: "→";
+			display: inline-block;
+			margin-right: $gutter/4;
+		}
+	}
+}
