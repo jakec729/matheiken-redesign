@@ -11,7 +11,9 @@
 		width: $gutter/2;
 		background-color: $primary-color;
 		height: 2px;
-		display: inline-block;
+		display: block;
+		position: relative;
+		bottom: -2px;
 		margin-top: $gutter;
 	}
 }
