@@ -39,7 +39,7 @@
 	padding-right: $gutter;
 	flex-grow:1;
 
-	@include col-bp-min(3) {
+	@include bp-min($col-width * 4 / $container-width-num) {
 		text-align: left;
 		display: flex;
 	}
@@ -59,7 +59,7 @@
 	position: relative;
 	left: -5px;
 
-	@include col-bp-min(3) {
+	@include bp-min($col-width * 4 / $container-width-num) {
 		width: (100% - $container-width) / 2 / $container-width-num;
 		margin-left: (100% - $container-width) / 2 / $container-width-num * -1;
 		text-align: center;
@@ -70,7 +70,7 @@
 	img {
 		max-width: $gutter*2;
 
-		@include col-bp-min(3) {
+		@include bp-min($col-width * 4 / $container-width-num) {
 			max-width: $gutter * 1.5;
 		}
 	}

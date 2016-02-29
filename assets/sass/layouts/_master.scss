@@ -27,7 +27,7 @@ body {
 .site-footer {
 	display: none;
 
-	@include col-bp-min(3) {
+	@include bp-min($col-width * 3) {
 		display: block;
 		font-size: 13px;
 		position: fixed;
@@ -44,5 +44,4 @@ body {
 
 .page-wrap {
 	@include grid-lines();
-
 }

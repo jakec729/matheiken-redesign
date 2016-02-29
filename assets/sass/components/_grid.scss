@@ -1,13 +1,39 @@
 .container-fluid {
-	margin: 0 auto;
+	// margin: 0 auto;
 
-	@include col-bp-min(3){
-		width: $container-width;
+
+	@include bp-min($col-width * 3) {
+		width: $col-width * 3;
 	}
 
-	// @include bp-min($col-width * 2.5 / $container-width-num){
-	// 	width: $container-width;
-	// }
+	@include bp-min($col-width * 4) {
+		width: $col-width * 4;
+	}
+
+	@include bp-min($col-width * 4 / $container-width-num) {
+		margin-left: 10%;
+		width: $col-width * 4;
+	}
+
+	@include bp-min($col-width * 5 / $container-width-num) {
+		width: $col-width * 5;
+	}
+
+	@include bp-min($col-width * 6 / $container-width-num) {
+		width: $col-width * 6;
+	}
+
+	@include bp-min($col-width * 7 / $container-width-num) {
+		width: $col-width * 7;
+	}
+
+	@include bp-min($col-width * 8 / $container-width-num) {
+		width: $col-width * 8;
+	}
+
+	@include bp-min($col-width * 9 / $container-width-num) {
+		width: $col-width * 9;
+	}
 }
 
 
