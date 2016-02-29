@@ -26,7 +26,7 @@
 	}
 
 	@include col-bp-min(4) {
-		&:hover &__image{
+		&__trigger:hover + &__image{
 			display: block;
 		}
 	}
