@@ -1,3 +1,21 @@
+@mixin grid-lines() {
+	&::before {
+		background: linear-gradient(
+	        90deg,
+	        rgba(0,0,0,0.05) 0%,
+	        transparent 0.5%
+		);
+		background-size: $col-width; 
+		z-index: 1000;
+		position: fixed;
+		height: 100%;
+		width: 100%;
+		content: "";
+		display: block;
+		pointer-events: none;
+	}
+}
+
 body {
 	min-width: $col-width * 2;
 }
@@ -25,21 +43,6 @@ body {
 }
 
 .page-wrap {
-	background: linear-gradient(
-        90deg,
-        grey(10) 0%,
-        transparent 0.5%
-	);
-	background-size: $col-width; 
-	min-height: 100vh;
+	@include grid-lines();
 
-	&.navbar {
-		background: linear-gradient(
-	        90deg,
-	        grey(10) 0%,
-	        white 0.5%
-		);
-		background-size: $col-width; 
-		min-height: auto;
-	}
 }
