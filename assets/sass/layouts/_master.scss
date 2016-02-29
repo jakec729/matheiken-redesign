@@ -6,6 +6,24 @@ body {
 	margin-bottom: 2 * $gutter;
 }
 
+.site-footer {
+	display: none;
+
+	@include col-bp-min(3) {
+		display: block;
+		font-size: 13px;
+		position: fixed;
+		bottom: $gutter * 3;
+		right: 0;
+		transform: rotate(-90deg);
+
+		p {
+			margin: 0;
+			padding: 0;
+		}
+	}
+}
+
 .page-wrap {
 	background: linear-gradient(
         90deg,
