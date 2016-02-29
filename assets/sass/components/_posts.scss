@@ -3,65 +3,45 @@
 	font-size: 13px;
 	line-height: 16px;
 
-	&__image,
 	&__header,
 	&__sidebar,
-	&__content {
+	&__details > div {
 		padding: 0 $gutter;
 	}
-	// padding: 0 $gutter;
 
 	&__header {
-		margin-top: $gutter * 2;
-		@include block-separator();
-		
+		display: flex;
+	}
+
+	&__image {
+		margin-bottom: $gutter;
 	}
 
 	&__details {
-		@include col-bp-min(2) {
-			display: flex;
-		}
-	}
-
-	&__image figure {
-		flex-basis: auto;
-
-		@include col-bp-min(3) {
-			flex: 0 0 100% / 12 * 9;
-		}
+		display: flex;
+		flex-wrap: wrap;
 	}
 
 	&__content {
-		margin-bottom: $gutter;
-		flex: 1 1 auto;
-		
-		p:first-child {
-			border-top: 2px solid black;
-			padding-top: 1.5em;
-		}
+		flex: 0 0 $col-width * 2;
+	}
 
-		@include col-bp-min(2) {
-			flex: 0 0 100% / 12 * 6;
+	.flex-expander {
+		flex: 0 0 $col-width * 2;
 
-			p:first-child {
-				border: none;
-				padding-top: 0;
-			}
+		@include bp-min($col-width * 3) {
+			flex: 1 0 $col-width * 2;
 		}
 	}
 
+	&__title {
+		@include block-separator();
+		margin-top: 0;
+	}
+
+
 	&__sidebar {
-		flex: 0 0 250px;
-
-		@include col-bp-min(2) {
-			order: 2;
-		}
-
-		@include col-bp-min(3) {
-			flex-basis: 100% / 12 * 3;
-		}
-
-		@include col-bp-max(2) {
+		@include bp-max($col-width * 3) {
 
 			.sidebar__heading {
 				float: left;
@@ -92,10 +72,6 @@
 
 	}
 
-
-	&__images {
-		// flex: 0 0 60%;
-	}
 
 	&__title {
 		font-size: 19px;
@@ -129,10 +105,31 @@
 	}
 }
 
+.post-about {
+
+	.post__content {
+		flex: 0 0 $col-width*2;
+	}
+
+	.post__sidebar {
+		flex: 0 0 $col-width * 2;
+
+		@include bp-min($col-width * 3) {
+			flex: 0 0 $col-width;
+			order: 2;
+		}
+	}
+}
+
 .sidebar {
 
 	.widget-wrap {
 		border-top: 2px solid black;
+		border-bottom: 2px solid black;
+
+		@include bp-min($col-width * 3) {
+			border-bottom: none;
+		}
 	}
 
 	&__heading {

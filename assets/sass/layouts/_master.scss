@@ -27,7 +27,7 @@ body {
 .site-footer {
 	display: none;
 
-	@include bp-min($col-width * 3) {
+	@include bp-min($col-width * 4 + $col-width/4) {
 		display: block;
 		font-size: 13px;
 		position: fixed;

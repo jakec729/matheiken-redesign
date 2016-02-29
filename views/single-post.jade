@@ -2,18 +2,18 @@ extends layouts/master.jade
 
 block content
 	main.post
-		figure.post__image
-			img(src="https://unsplash.it/1200/700", alt="Featured Image")
+		header.post__header
+			figure.post__image.flex-expander
+				img(src="https://unsplash.it/1200/700", alt="Featured Image")
 		section.post__details
-			div.post__content.flex-col-5
+			div.post__content
 				h1.post__title New Lab
 				p.post__subhead Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, fugiat.
-				p &mdash;
 				div.post__description
 					p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea totam odit eius sit iure ex beatae velit voluptates vero quo laborum ipsum alias necessitatibus in fugiat numquam minima, temporibus, nobis sed excepturi est soluta voluptatem.
 					p Molestiae repudiandae voluptas dolorem, quas corporis a non laboriosam sequi quo obcaecati numquam, vero blanditiis quod iste dicta! Minus modi tenetur voluptatibus sapiente velit iste obcaecati maiores laborum consectetur fugiat eius, unde exercitationem natus et.
 					a.cta(href="#") Visit New Lab
-			div.post__images.flex-col-7
+			div.post__images.flex-expander
 				figure
 					img(src="https://unsplash.it/800/400", alt="Post Image")
 				figure
@@ -24,7 +24,7 @@ block content
 					img(src="https://unsplash.it/800/403", alt="Post Image")
 		footer.post__footer.widget-related-projects
 			h3.widget__heading Related Projects
-			div.flex-container.projects
+			div.projects.flex-container
 				article.project.flex-item: a(href="single-post.html")
 					p.project__category Film
 					h4.project__title Project Title
