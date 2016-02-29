@@ -1,12 +1,13 @@
 extends layouts/master.jade
 
 mixin project(_category,_name,_src)
-	article.project.flex-item.hover-fixed
-		p.project__category: a(href="#")= _category
-		h4.project__title.hover-fixed__trigger: a(href="single-post.html")= _name
+	article.project.flex-item.hover-fixed.hover-fixed__trigger
 		figure.project__image.hover-fixed__image
 			img(src=_src, alt="Project Image")
-		p.project__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, suscipit.
+		p.project__category: a(href="#")= _category
+		a(href="single-post.html").project__link
+			h4.project__title= _name
+			p.project__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, suscipit.
 
 block content
 	main
