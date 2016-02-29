@@ -22,9 +22,11 @@
 	a {
 		color: $black;
 		font-size: 13px;
+		text-decoration: none;
+		padding-bottom: 1px;
 		
 		&:hover {
-			text-decoration: underline;
+			border-bottom: 1px solid $primary-color;
 		}
 	}
 }
@@ -46,12 +48,9 @@
 		display: inline-block;
 		margin-bottom: 6px;
 		flex: 0 0 $col-width/2;
-	}
-
-	a {
-		text-decoration: none;
 		padding-left: $gutter;
 	}
+
 }
 
 .navbar__brand {

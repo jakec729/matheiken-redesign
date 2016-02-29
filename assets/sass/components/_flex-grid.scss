@@ -4,6 +4,12 @@
 	}
 }
 
+@mixin col-bp-max($col) {
+	@include bp-max( ( $col-width * $col + ( $col-width / 2 ) ) / $container-width-num ) {
+		@content;
+	}
+}
+
 @for $i from 1 through 12 {
 	.flex-col-#{$i} {
 		flex-basis: 100% / 12 * $i;
