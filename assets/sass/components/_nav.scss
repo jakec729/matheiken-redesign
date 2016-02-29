@@ -6,9 +6,16 @@
 
 	&.navbar-fixed {
 		position: fixed;
-		width: $container-width;
-		left: (100% - $container-width) / 2;
+		left: 0;
 		top: 0;
+		width: 100%;
+		min-width: $col-width * 2;
+		z-index: 10;
+
+		@include bp-min($col-width * 4 / $container-width-num) {
+			width: $container-width;
+			left: (100% - $container-width) / 2;
+		}
 	}
 
 	&.page-wrap {
