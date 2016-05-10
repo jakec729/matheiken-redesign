@@ -27,10 +27,10 @@ body {
 
 .site-footer {
 	display: none;
+	font-size: 11px;
 
 	@include bp-min($col-width * 4 + $col-width/4) {
 		display: block;
-		font-size: 13px;
 		position: fixed;
 		bottom: $gutter * 3;
 		right: 0;
@@ -44,5 +44,5 @@ body {
 }
 
 .page-wrap {
-	@include grid-lines();
+	// @include grid-lines();
 }

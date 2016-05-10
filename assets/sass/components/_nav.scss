@@ -12,9 +12,10 @@
 		min-width: $col-width * 2;
 		z-index: 10;
 
-		@include bp-min($col-width * 4 / $container-width-num) {
-			width: $container-width;
-			left: (100% - $container-width) / 2;
+		.container-fluid {
+			@include container-grid-bp-max(3) {
+				width: 100%;
+			}
 		}
 	}
 
@@ -24,6 +25,21 @@
 
 	.active {
 		font-weight: 700;
+	}
+
+}
+
+.navbar__items {
+	font-size: 13px;
+	line-height: 16px;
+	margin: 0;
+	text-align: right;
+	flex-grow:1;
+	padding: 22px $gutter 22px 0;
+
+	@include container-grid-bp-min(3) {
+		text-align: left;
+		display: flex;
 	}
 
 	a {
@@ -36,49 +52,44 @@
 			border-bottom: 1px solid $primary-color;
 		}
 	}
-}
-
-.navbar__items {
-	font-size: 13px;
-	line-height: 16px;
-	margin: 0;
-	text-align: right;
-	padding-right: $gutter;
-	flex-grow:1;
-
-	@include bp-min($col-width * 4 / $container-width-num) {
-		text-align: left;
-		display: flex;
-	}
 
 	li {
 		display: inline-block;
-		margin-bottom: 6px;
+		// margin-bottom: 6px;
 		flex: 0 0 $col-width/2;
 		padding-left: $gutter;
 	}
-
 }
 
 .navbar__brand {
-	width: 20%;
-	padding-left: $gutter;
-	position: relative;
-	left: -5px;
-
-	@include bp-min($col-width * 4 / $container-width-num) {
-		width: (100% - $container-width) / 2 / $container-width-num;
-		margin-left: (100% - $container-width) / 2 / $container-width-num * -1;
-		text-align: center;
-		padding-left: 0;
-		margin-bottom: 0;
-	}
+	position: fixed;
+	left: 24px;
+	width: 50px;
 
 	img {
-		max-width: $gutter*2;
-
-		@include bp-min($col-width * 4 / $container-width-num) {
-			max-width: $gutter * 1.5;
-		}
+		width: 100%;
 	}
 }
+
+// .navbar__brand {
+// 	width: 20%;
+// 	padding-left: $gutter;
+// 	position: relative;
+// 	left: -5px;
+
+// 	@include bp-min($col-width * 4 / $container-width-num) {
+// 		width: (100% - $container-width) / 2 / $container-width-num;
+// 		margin-left: (100% - $container-width) / 2 / $container-width-num * -1;
+// 		text-align: center;
+// 		padding-left: 0;
+// 		margin-bottom: 0;
+// 	}
+
+// 	img {
+// 		max-width: $gutter*2;
+
+// 		@include bp-min($col-width * 4 / $container-width-num) {
+// 			max-width: $gutter * 1.5;
+// 		}
+// 	}
+// }

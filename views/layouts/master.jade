@@ -10,9 +10,9 @@ html(lang="en")
 		
 		link(rel="stylesheet", href="assets/css/style.css")
 	body
-		div.container-fluid.page-wrap
-			header.site-header
-				nav.navbar.navbar-fixed.page-wrap
+		header.site-header
+			nav.navbar.navbar-fixed.page-wrap
+				.container-fluid
 					div.navbar__brand
 						a(href="index.html"): img(src="assets/imgs/matheiken.svg", alt="Logo")
 						h1.seo-hidden Sheena Matheiken
@@ -20,6 +20,7 @@ html(lang="en")
 						li: a.active(href="index.html") Projects
 						li: a(href="#") Journal
 						li: a(href="about.html") Information
+		div.container-fluid.page-wrap
 			block content
 			footer.site-footer
 				p &copy; 2016 Matheiken

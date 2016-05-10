@@ -6,7 +6,8 @@ mixin project(_category,_name,_src)
 			img(src=_src, alt="Project Image")
 		p.project__category: a(href="#")= _category
 		a(href="single-post.html").project__link
-			h4.project__title= _name
+			h4.project__title
+				!= _name + '&nbsp;<span class="arrow">&rarr;</span>'
 			p.project__description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, suscipit.
 
 block content

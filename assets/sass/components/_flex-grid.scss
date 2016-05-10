@@ -27,27 +27,4 @@
 		padding-right: $gutter;
 		flex: 0 0 $col-width;
 	}
-
-	&.projects-wrap {
-		flex-basis: $col-width * 2;
-
-		@include bp-min($col-width * 3 / $container-width-num) {
-			flex: 1 1 0;
-		}
-	}
-}
-	
-.projects__header {
-	margin-bottom: $col-width/5;
-
-	@include bp-min($col-width * 3) {
-		order: 2;
-	}
-
-	@include bp-min($col-width * 4 / $container-width-num) {
-		&.flex-item {
-			flex: 0 0 $col-width * 2;
-			padding-left: $col-width + $gutter !important;
-		}		
-	}
 }
