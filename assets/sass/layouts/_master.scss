@@ -16,6 +16,10 @@
 	}
 }
 
+.grid-lines {
+	@include grid-lines;
+}
+
 body {
 	min-width: $col-width * 2;
 }
