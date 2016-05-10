@@ -23,39 +23,13 @@
 			width: $col-width * $i; 
 		}
 	}
-
-	// @include bp-min($col-width * 3) {
-	// 	width: $col-width * 3;
-	// }
-
-	// @include bp-min($col-width * 4) {
-	// 	width: $col-width * 4;
-	// }
-
-	// @include bp-min($col-width * 4 / $container-width-num) {
-	// 	margin-left: 10%;
-	// 	width: $col-width * 4;
-	// }
-
-	// @include bp-min($col-width * 5 / $container-width-num) {
-	// 	width: $col-width * 5;
-	// }
-
-	// @include bp-min($col-width * 6 / $container-width-num) {
-	// 	width: $col-width * 6;
-	// }
-
-	// @include bp-min($col-width * 7 / $container-width-num) {
-	// 	width: $col-width * 7;
-	// }
-
-	// @include bp-min($col-width * 8 / $container-width-num) {
-	// 	width: $col-width * 8;
-	// }
-
-	// @include bp-min($col-width * 9 / $container-width-num) {
-	// 	width: $col-width * 9;
-	// }
 }
+
+//bp-min
+.container-fluid-max .container-fluid {
+	max-width: $col-width * $container-fluid-max-cols;
+	margin-left: $grid-offset-side;
+}
+
 
 
