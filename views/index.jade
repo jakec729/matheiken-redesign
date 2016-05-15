@@ -2,7 +2,7 @@ extends layouts/master.jade
 
 mixin project(_category,_name,_src)
 	article.project.flex-item.hover-fixed.hover-fixed__trigger
-		figure.project__image.hover-fixed__image
+		figure.project__image.hover-fixed__image&attributes(attributes)
 			img(src=_src, alt="Project Image")
 		p.project__category: a(href="#")= _category
 		a(href="single-post.html").project__link
@@ -15,35 +15,35 @@ block content
 		section.projects.flex-container
 			header.projects__header.flex-item: h3.projects__group-name Ongoing
 			div.flex-container.projects-wrap
-				+project('Experience Design', 'New Lab', "https://unsplash.it/1200/600/?random")
-				+project('Feature Film', 'Sea to Shining Sea', "https://unsplash.it/800/400/?random")
-				+project('Feature Film', 'Yojimbo', "https://unsplash.it/960/540/?random")
+				+project('Experience Design', 'New Lab', "https://unsplash.it/1200/600/?random")(class="hover-top-left")
+				+project('Feature Film', 'Sea to Shining Sea', "https://unsplash.it/800/400/?random")(class="hover-bottom-left")
+				+project('Feature Film', 'Yojimbo', "https://unsplash.it/960/540/?random")(class="hover-top-right")
 		section.projects.flex-container
 			header.projects__header.flex-item: h3.projects__group-name 2015&ndash;2013
 			div.flex-container.projects-wrap
-				+project('Feature Film', 'La Vos De Los Silenciados', "https://unsplash.it/600/540/?random")
-				+project('Talk', 'Rise of the Unemployables', "https://unsplash.it/980/540/?random")
-				+project('Residency', 'New Inc', "https://unsplash.it/969/540/?random")
-				+project('Talk', 'The Revolution Will Not Be Televised', "https://unsplash.it/960/540/?random")
-				+project('Experience Design', 'AT&T Media Lab', "https://unsplash.it/960/600/?random")
-				+project('UX + Design', 'Correlate Data', "https://unsplash.it/960/800/?random")
-				+project('UX + Design', 'B-Team', "https://unsplash.it/960/840/?random")
+				+project('Feature Film', 'La Vos De Los Silenciados', "https://unsplash.it/600/540/?random")(class="hover-top-right")
+				+project('Talk', 'Rise of the Unemployables', "https://unsplash.it/980/540/?random")(class="hover-top-right")
+				+project('Residency', 'New Inc', "https://unsplash.it/969/540/?random")(class="hover-bottom-left")
+				+project('Talk', 'The Revolution Will Not Be Televised', "https://unsplash.it/960/540/?random")(class="hover-bottom-right")
+				+project('Experience Design', 'AT&T Media Lab', "https://unsplash.it/960/600/?random")(class="hover-top-left")
+				+project('UX + Design', 'Correlate Data', "https://unsplash.it/960/800/?random")(class="hover-bottom-right")
+				+project('UX + Design', 'B-Team', "https://unsplash.it/960/840/?random")(class="hover-top-right")
 		section.projects.flex-container
 			header.projects__header.flex-item: h3.projects__group-name 2012&ndash;2010
 			div.flex-container.projects-wrap
-				+project('Independent', 'Uniform Book', "https://unsplash.it/960/740/?random")
-				+project('Independent', 'U.P. Book', "https://unsplash.it/970/540/?random")
-				+project('Talk', 'TED x Dubai', "https://unsplash.it/960/547/?random")
-				+project('Experience Design', 'Mill Touch', "https://unsplash.it/760/540/?random")
-				+project('Experience Design', 'Nike Touch', "https://unsplash.it/560/540/?random")
-				+project('UX + Design', 'Salon App', "https://unsplash.it/990/540/?random")
-				+project('Independent', 'Posterity', "https://unsplash.it/960/549/?random")
+				+project('Independent', 'Uniform Book', "https://unsplash.it/960/740/?random")(class="hover-top-left")
+				+project('Independent', 'U.P. Book', "https://unsplash.it/970/540/?random")(class="hover-top-right")
+				+project('Talk', 'TED x Dubai', "https://unsplash.it/960/547/?random")(class="hover-top-left")
+				+project('Experience Design', 'Mill Touch', "https://unsplash.it/760/540/?random")(class="hover-bottom-left")
+				+project('Experience Design', 'Nike Touch', "https://unsplash.it/560/540/?random")(class="hover-top-right")
+				+project('UX + Design', 'Salon App', "https://unsplash.it/990/540/?random")(class="hover-top-left")
+				+project('Independent', 'Posterity', "https://unsplash.it/960/549/?random")(class="hover-bottom-right")
 		section.projects.flex-container
 			header.projects__header.flex-item: h3.projects__group-name Pre-2010
 			div.flex-container.projects-wrap
-				+project('UX + Design', 'Coverse', "https://unsplash.it/969/540/?random")
-				+project('UX + Design', 'US Open App', "https://unsplash.it/999/540/?random")
-				+project('Independent', 'Mofongo : Live', "https://unsplash.it/960/540/?random")
-				+project('Independent', 'Working Dead', "https://unsplash.it/960/540/?random")
-				+project('Experimental Film', 'Urbicide', "https://unsplash.it/960/540/?random")
-				+project('Independent', 'Monochrome Set', "https://unsplash.it/960/540/?random")
+				+project('UX + Design', 'Coverse', "https://unsplash.it/969/540/?random")(class="hover-top-left")
+				+project('UX + Design', 'US Open App', "https://unsplash.it/999/540/?random")(class="hover-bottom-left")
+				+project('Independent', 'Mofongo : Live', "https://unsplash.it/960/540/?random")(class="hover-top-right")
+				+project('Independent', 'Working Dead', "https://unsplash.it/960/540/?random")(class="hover-bottom-right")
+				+project('Experimental Film', 'Urbicide', "https://unsplash.it/960/540/?random")(class="hover-top-left")
+				+project('Independent', 'Monochrome Set', "https://unsplash.it/960/540/?random")(class="hover-bottom-left")
